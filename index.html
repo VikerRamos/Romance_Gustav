@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -18,23 +18,17 @@
     <div class="card">
         <div class="back"></div>
         <div class="front">
-            <div class="f-box">
-                <img id="img1" src="/img/img2.jpeg" alt="">
-            </div>
+
         </div>
-
-
-
-
         <div class="text-container">
 
             <p>
-                Você sempre diz que não gosta de matemática, e eu entendo que pode ser complicada. No entanto, é essa
-                complexidade que a torna fascinante. Na matemática, tudo é preciso e definido. Da mesma forma, nosso
-                encontro não foi uma coincidência, <strong>Você é a solução perfeita para todas equações do meu
-                    coração.</strong> No final das contas, entre todas as possibilidades, encontrei você exatamente,
-                você. <br>
-                <strong id="forte"> Feliz 4 Meses! 🤍</strong>
+                Siempre dices que no te gustan las matemáticas, y entiendo que pueden ser complicadas. Sin embargo, 
+                es precisamente esa complejidad lo que las hace fascinantes. En las matemáticas, todo es preciso y 
+                está definido. Del mismo modo, nuestro encuentro no fue una coincidencia <strong>eres la solución
+                perfecta para todas las ecuaciones de mi corazón.</strong> Al final, entre todas las posibilidades, 
+                te encontré a ti, exactamente a ti. ❤️
+                <strong id="forte"> Gracias por esta oportunidad y e ser el brillo en mi alma 🤍</strong>
             </p>
 
 
@@ -56,26 +50,30 @@
 
 
     <div class="musica">
+    <audio id="musica" loop>
+        <source src="music/sleeping at last - turning page (legendado).mp3" type="audio/mpeg">
+    </audio>
 
-        <button  id="botao"   onclick="playMusic()">
-        <audio  controls autoplay loop>
-            <source src="/music/sleeping at last - turning page (legendado).mp3" type="audio/mpeg">
-        </audio>
+    <button id="botao" onclick="toggleMusic()">
+        ▶ Reproducir
+    </button>
+</div>
 
-        </button>
+    <script>
+    function toggleMusic() {
+        const audio = document.getElementById('musica');
+        const botao = document.getElementById('botao');
 
-<script>
-    function playMusic() {
-        var audio = document.getElementById('musica');
-        audio.play();
+        if (audio.paused) {
+            audio.play();
+            botao.textContent = '⏸ Pausar';
+        } else {
+            audio.pause();
+            botao.textContent = '▶ Reproducir';
+        }
     }
-</script>
-
-
+    </script>
     </div>
-
-
-
 
 </body>
 
